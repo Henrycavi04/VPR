@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados del VRP</title>
+</head>
+<body>
+    <h1>Resultados del VRP</h1>
+    
+    <h2>Capacidad Máxima de Carga:</h2>
+    <p>{{ maxcarga }}</p>
+    
+    <h2>Rutas:</h2>
+    <ul>
+        {% for ruta in rutas %}
+            <li>
+                <ul>
+                    {% for ciudad in ruta %}
+                        <li>{{ ciudad }}</li>
+                    {% endfor %}
+                </ul>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <!-- Puedes mostrar más información o resultados adicionales aquí -->
+
+    <a href="/">Volver a ingresar pedidos</a>
+</body>
+</html>
